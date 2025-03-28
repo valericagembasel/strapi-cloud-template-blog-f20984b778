@@ -1,0 +1,18 @@
+{
+    "collectionName": "components_shared_cta",
+    "info": {
+        "displayName": "CTA",
+        "icon": ""
+    },
+    "options": {},
+    "attributes": {
+        "link": {
+            "type": "string",
+            "required": true
+        },
+        "text": {
+            "type": "string",
+            "required": true
+        }
+    }
+}
