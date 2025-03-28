@@ -29,11 +29,6 @@
       "required": false,
       "allowedTypes": ["images", "files", "videos"]
     },
-    "cta": {
-      "type": "cta",
-      "multiple": false,
-      "required": false
-    },
     "blocks": {
       "type": "dynamiczone",
       "components": ["shared.media", "shared.quote", "shared.rich-text", "shared.slider"]
