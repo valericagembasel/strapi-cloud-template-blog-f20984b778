@@ -12,6 +12,17 @@ export interface SharedCta extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedLevel2Menu extends Struct.ComponentSchema {
+  collectionName: 'components_shared_level_2_menus';
+  info: {
+    displayName: 'level_2_menu';
+  };
+  attributes: {
+    menu_link: Schema.Attribute.Component<'shared.link', false>;
+    nav_items: Schema.Attribute.Component<'shared.link', true>;
+  };
+}
+
 export interface SharedLink extends Struct.ComponentSchema {
   collectionName: 'components_shared_link';
   info: {
@@ -30,10 +41,13 @@ export interface SharedLink extends Struct.ComponentSchema {
 export interface SharedMainMenu extends Struct.ComponentSchema {
   collectionName: 'components_shared_main_menus';
   info: {
+    description: '';
     displayName: 'main menu';
   };
   attributes: {
-    nav_items: Schema.Attribute.Component<'shared.link', true>;
+    navigation_items: Schema.Attribute.DynamicZone<
+      ['shared.link', 'shared.level-2-menu']
+    >;
   };
 }
 
@@ -103,6 +117,7 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'shared.cta': SharedCta;
+      'shared.level-2-menu': SharedLevel2Menu;
       'shared.link': SharedLink;
       'shared.main-menu': SharedMainMenu;
       'shared.media': SharedMedia;

@@ -1,14 +1,17 @@
 {
   "collectionName": "components_shared_main_menus",
   "info": {
-    "displayName": "main menu"
+    "displayName": "main menu",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "nav_items": {
-      "type": "component",
-      "repeatable": true,
-      "component": "shared.link"
+    "navigation_items": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.link",
+        "shared.level-2-menu"
+      ]
     }
   }
 }

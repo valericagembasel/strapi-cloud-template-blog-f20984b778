@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_level_2_menus",
+  "info": {
+    "displayName": "level_2_menu"
+  },
+  "options": {},
+  "attributes": {
+    "menu_link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.link"
+    },
+    "nav_items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.link"
+    }
+  }
+}
