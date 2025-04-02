@@ -10,6 +10,17 @@
     "draftAndPublish": true
   },
   "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text",
+      "maxLength": 80
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
     "zone": {
       "type": "dynamiczone",
       "components": [
